@@ -59,29 +59,9 @@ function add_footer_custom_scripts(){
 
 add_action( 'wp_footer', 'add_footer_custom_scripts' );
 
-/**
-* Set the URL to redirect to on login.
-*
-* @param string $url The visited URL.
-* @return string The URL to redirect to on login. Must be absolute.
-*/
-function my_forcelogin_redirect( $url ) {
-	return home_url( '/' );
-}
-add_filter( 'v_forcelogin_redirect', 'my_forcelogin_redirect' );
-
-/**
- * Hide the 'Back to {sitename}' link on the login screen.
-**/
-function my_forcelogin_hide_backtoblog() {
-	echo '<style type="text/css">#backtoblog{display:none;}</style>';
-}
-add_action( 'login_enqueue_scripts', 'my_forcelogin_hide_backtoblog');
-
 /** 
   * Carregando conteúdo extra com base na página
 **/
-
 function add_footer_custom_scripts_by_page(){
 	
 	if( is_page( "perfil" ) ){
