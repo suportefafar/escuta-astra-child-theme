@@ -1,0 +1,389 @@
+/*
+ * Theme Name: Escuta Astra Child Theme
+ * Author: Suporte FAFAR UFMG
+ * Author URI: https://github.com/suportefafar
+ * Description: Tema filho para a Escuta Acadêmica da Faculdade de Farmácia UFMG 
+ * Version: 1.0.0
+ * License: GNU General Public License v2 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain: escuta-astra-child-theme
+ * Template: astra
+ * GitHub Theme URI: https://github.com/suportefafar/escuta-astra-child-theme
+*/
+
+:root {
+  --cor-1: #00a9a5;
+  --cor-2: #235789;
+  --cor-3: #1e293b;
+  --cor-4: #67768e;
+  --cor-5: #ffffff;
+  --cor-6: #f2f5f7;
+  --cor-7: #ffcd57;
+  --cor-8: #d52941;
+  --cor-9: #eeeeee;
+  --bg-9: rgba(0, 169, 165, 0.1);
+  --bg-10: #23578931;
+  --cor-positivo: #104911;
+  --cor-negativo: #d52941;
+  --border-1: rgba(0, 0, 0, 0.1);
+  --border-1-on-hover: rgba(99, 99, 99, 0.5);
+}
+
+/*
+* ACOLHIDOS
+* START
+*/
+.lista-item-container {
+  width: 100%;
+  display: flex;
+}
+
+.lista-item-img-container {
+  background-color: var(--cor-6);
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.lista-item-img-container img {
+  border-radius: 10%;
+  height: 64px;
+  width: 64px;
+}
+
+.lista-item-info-container {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.1rem;
+
+  transition: all 250ms;
+}
+
+.lista-item-container:hover .lista-item-info-container {
+  border-bottom: 1px solid var(--border-1-on-hover);
+}
+
+/*
+* END
+*/
+
+.container-perfil-imagem {
+  background-color: var(--cor-6);
+  display: flex;
+  justify-content: center;
+}
+
+.hr-com-div {
+  border-bottom: 1px solid #eee;
+  height: 1px;
+}
+
+.linhas-entre-botoes {
+  flex: 1;
+}
+
+.linha-info-perfil {
+  transition: all 250ms;
+}
+
+.linha-info-perfil:hover {
+  border-bottom: 1px solid var(--border-1-on-hover);
+}
+
+.texto-resposta-afirmativa {
+  color: var(--cor-positivo) !important;
+}
+
+.texto-resposta-negativa {
+  color: var(--cor-negativo) !important;
+}
+
+@media (min-width: 1024px) {
+}
+
+/*
+* FAFAR AW BUTTON
+* START
+*/
+
+.fafar-aw-clean-button {
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid var(--border-1);
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+  text-decoration: none !important;
+
+  display: flex;
+  gap: 0.5rem;
+}
+
+.fafar-aw-clean-button:hover,
+.fafar-aw-clean-button:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: var(--border-1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.fafar-aw-clean-button:hover {
+  transform: translateY(-1px);
+}
+
+.fafar-aw-clean-button:active {
+  background-color: #f0f0f1;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(0);
+}
+
+/*
+* END
+*/
+
+/*
+* CARD ESCUTA
+* START
+*/
+
+.escuta-card {
+  position: relative;
+  color: #2e2e2f;
+  background-color: #fff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--border-1);
+
+  transition: all 250ms;
+}
+
+.escuta-card:hover {
+  border: 1px solid var(--border-1-on-hover);
+}
+
+.escuta-card p {
+  margin: 0;
+  padding: 0;
+}
+
+.escuta-card-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.escuta-card-header-edit-button {
+  font-size: 1rem;
+  color: var(--cor-2);
+
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  transition: all 250ms ease;
+
+  text-decoration: none !important;
+}
+
+.escuta-card:hover .escuta-card-header-edit-button {
+  opacity: 1;
+}
+
+.escuta-card-header-edit-button:hover {
+  cursor: pointer;
+  background-color: var(--bg-10);
+}
+
+.escuta-card-body {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.escuta-body-block-content {
+  height: 6rem;
+  background: #3a3a3a;
+}
+
+.escuta-body-block-content-large {
+  height: 9rem;
+  background: #3a3a3a;
+}
+
+.escuta-card-footer {
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.footer-options {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 0.75rem;
+}
+
+.footer-options div {
+  display: flex;
+  align-items: center;
+  height: 20px;
+}
+
+.footer-options div span {
+  fill: #9fa4aa;
+  color: #9fa4aa;
+  font-size: 15px;
+
+  display: flex;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+}
+
+.footer-options div span.dashicons {
+  font-size: 16px;
+}
+
+.footer-tags {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 0.5rem;
+}
+
+.tag {
+  padding: 4px 13px;
+  font-size: 14px;
+  color: var(--cor-1);
+  background-color: var(--bg-9);
+  font-weight: bold;
+
+  transition: all 250ms;
+}
+
+.tag:hover {
+  transform: translateY(-1px);
+}
+
+@media (max-width: 924px) {
+  .escuta-card-footer {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-options {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 0.75rem;
+  }
+
+  .footer-tags {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    gap: 0.5rem;
+  }
+}
+
+/*
+* END
+*/
+
+/*
+* Search Input
+* START
+*/
+
+.search-input-container {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.075);
+}
+
+.search-input-container > input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 0.9em;
+  caret-color: var(--cor-1);
+}
+
+/*
+* END
+*/
+
+/*
+* Page Acolhidos
+* START
+*/
+
+.search-input-container-acolhidos {
+  width: 50%;
+}
+
+@media (max-width: 921px) {
+  .search-input-container-acolhidos {
+    width: 75%;
+  }
+}
+
+@media (max-width: 768px) {
+  .search-input-container-acolhidos {
+    width: 100%;
+  }
+}
+
+/*
+* END
+*/
